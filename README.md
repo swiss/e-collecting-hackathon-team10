@@ -125,7 +125,7 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 ## Team Members
 
 - Valérie Vuillez Boget/GitHub Account (role)
-- Olivier Leclère/GitHub Account (role)
+- Olivier Leclère / OlivierLeclereGE
 - Name/GitHub Account (role)
 - ...
 

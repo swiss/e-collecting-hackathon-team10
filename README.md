@@ -4,7 +4,58 @@
 
 ## Approach
 
-*A brief description of your approach, a link/reference to the detailed description of your approach and what you have already created (if applicable). Please also mention which skills you need for your team.*
+Le canton de Genève souhaite développer une démarche en ligne d'e-collecting qui s'intègre directement dans le portail e-Gov (e-démarche à Genève) du canton. Cette prestation permettra d'offrir aux citoyennes et citoyens du canton un canal électronique, en plus du canal papier, qui s'interfacera à l'application genevoise de contrôle des signatures d'initiatives (IN) et de référendums (REF). 
+
+Les personnes s'authentifieront avec leur identité électronique (e-ID), pour apporter leur soutien aux IN et/ou REF, pour lesquels ils disposent des droits politiques. Les autorités valideront automatiquement et en temps réel les droits de la personne, ainsi que l'unicité de la signature. 
+
+Cette solution en mains publiques garantit un accès 24h/24, élimine la fraude tout en préservant le choix entre les canaux papier et digital, rendant la démocratie directe véritablement accessible à tous, y compris aux personnes en situation de handicap.
+
+### Objectifs
+- Permettre un accès direct sans recours à des tiers
+- Restaurer la confiance dans la récolte des signatures
+- Offrir un outil garantissant l'autonomie des personnes en situation de handicap
+- Offrir un accès 24h/24 aux récoltes des signatures en cours
+- Permettre aux SE d'apporter un soutien pour un objet 
+- Rétablir l'égalité des chances entre les petits et les grands comités
+
+### Philosophie
+- Solution qui doit être en mains publiques, car c'est une tâche régalienne
+- Conjuguer récolte traditionnelle papier et récolte électronique 
+- Proposer une solution qui soit simple d'utilisation tant pour les comités que les électrices et électeurs
+- Toujours avoir le choix des canaux de récolte (papier, électronique) tant pour les comités que les électrices et électeurs 
+- Diminuer la dépendance à des tiers (sociétés de récolte de signatures)
+
+### Approche
+- Accès via la plateforme Egov du canton de Genève (e-démarches) qui permet notamment aux genevoises et genevois de faire leur déclaration fiscale. Haut niveau de sécurité via une authentification forte et une identité vérifiée
+- Registre électoral centralisé dans le canton de Genève
+- Connexion via e-ID cantonale et ultérieurement e-ID fédérale
+- Optimiser les coûts et l'expérience utilisateur : en utilisant les infrastructures IT de l'Etat de Genève et une gestion d'identité existante pour les personnes : e-démarche
+- Pas de secret de la signature ou du soutien électronique. Signer ou soutenir un objet pour qu'il rentre dans l'agenda politique ne signifie pas que l'on va forcément voter en faveur de cet objet 
+
+### Identification des acteurs
+- Électrices et électeurs 
+- Comités référendaires ou initiatives
+- Canton : chancellerie d'État 
+- Communes 
+- Chancellerie fédérale
+
+### Concept
+Électrices et électeurs peuvent apporter leurs soutiens digitaux aux objets pour lesquels ils disposent des droits politiques :
+- **Personnes suisses** : fédéral, cantonal et communal : la commune de résidence (À GE les SE n'ont pas les droits politiques au niveau communal)
+- **Personnes sous curatelle de portée générale** : cantonal et communal
+- **Personnes étrangères résidantes depuis 8 ans** : communal dans la commune de résidence
+
+La personne ne peut soutenir que les référendums et les initiatives pour lesquels elle dispose des droits. Grâce à ce système, il n'y a dès lors que des soutiens/signatures valables. Cela simplifie :
+- les contrôles des autorités
+- le calcul du nombre de signatures valables requises pour les comités qui n'ont plus de surprises pour les soutiens électroniques 
+
+Mise à jour du système de contrôle des signatures valables pour ajouter un canal digital qui s'agrégera avec le canal papier, à l'instar de ce qui existe pour le vote électronique avec les deux autres canaux traditionnels.
+
+Destruction des données conformément à la LEDP. 
+
+Système de récolte en ligne sur plateforme web ge.ch et pas d'utilisation d'APP sur Google ou Applestore :
+- Pour ne pas avoir de dépendance à un système US
+- Pour ne pas avoir de frais de maintenance récurrents à toute APP
 
 ## Documentation and Diagrams
 

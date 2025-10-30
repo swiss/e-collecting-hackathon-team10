@@ -29,7 +29,7 @@ Cette solution en mains publiques garantit un accès 24h/24, élimine la fraude 
 - Accès via la plateforme Egov du canton de Genève (e-démarches) qui permet notamment aux genevoises et genevois de faire leur déclaration fiscale. Haut niveau de sécurité via une authentification forte et une identité vérifiée
 - Registre électoral centralisé dans le canton de Genève
 - Connexion via e-ID cantonale et ultérieurement e-ID fédérale
-- Optimiser les coûts et l'expérience utilisateur : en utilisant les infrastructures IT de l'Etat de Genève et une gestion d'identité existante pour les personnes : e-démarche
+- Optimiser les coûts et l'expérience utilisateur : en utilisant les infrastructures IT de l'Etat de Genève et une gestion d'identité existante pour les personnes : e-démarches
 - Pas de secret de la signature ou du soutien électronique. Signer ou soutenir un objet pour qu'il rentre dans l'agenda politique ne signifie pas que l'on va forcément voter en faveur de cet objet 
 
 ### Identification des acteurs
@@ -53,7 +53,7 @@ Mise à jour du système de contrôle des signatures valables pour ajouter un ca
 
 Destruction des données conformément à la LEDP. 
 
-Système de récolte en ligne sur plateforme web ge.ch et pas d'utilisation d'APP sur Google ou Applestore :
+Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d'APP sur Google ou Applestore :
 - Pour ne pas avoir de dépendance à un système US
 - Pour ne pas avoir de frais de maintenance récurrents à toute APP
 

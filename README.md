@@ -149,9 +149,34 @@ sequenceDiagram
 
 *List the key strengths and weaknesses of your solution.*
 
-### Strengths:
-- ...
-- ...
+### Strengths / Forces de la solution proposée :
+* Utilisation d’infrastructures existantes moyennant une adaptation des SI. Pas besoin de créer des infrastructures. Il s'agit d'une optimisation des ressources existantes.
+
+* Conforme au droit cantonal – le canton de Genève a une disposition expérimentale dans la LEDP qui lui permet de faire des tests notamment en matière digitale. Il n’est donc pas nécessaire d’adapter les bases légales cantonales pour débuter les essais au niveau cantonal et communal
+
+* Suivi en temps réel des soutiens digitaux récoltés – communication du nombre aux comités
+
+* L’électeur voit les objets pour lesquels il a apporté un soutien pour une mise à l’agenda politique
+
+* Les personnes ne peuvent pas soutenir/signer plus d’une fois au niveau digital, contrairement au papier. La première signature enregistrée pour une personne bloque tout autre enregistrement papier ou électronique.
+
+* Réduction de la fraude
+
+* Participation des Suisses de l'étranger : facilitation pour les expatriés inscrits
+
+* Autonomie des personnes en situation de handicap
+
+* Choix offert aux électeurs : digital ou papier
+
+* Planification budgétaire : coûts prévisibles vs coûts variables des sociétés de récolte
+
+* Continuité de la démocratie directe en cas de crise sanitaire (cf. COVID)
+
+* Inclusion des jeunes : génération Digital Native plus encline à participer sur des canaux digitaux que papier
+
+* Pas de dépendance à une entreprise américaine
+
+* Pas de frais de maintenance liée à un App.
 
 ### Weaknesses:
 - ...

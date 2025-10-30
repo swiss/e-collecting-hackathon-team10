@@ -15,7 +15,7 @@ Cette solution en mains publiques garantit un accès 24h/24, élimine la fraude 
 - Restaurer la confiance dans la récolte des signatures
 - Offrir un outil garantissant l'autonomie des personnes en situation de handicap
 - Offrir un accès 24h/24 aux récoltes des signatures en cours
-- Permettre aux SE d'apporter un soutien pour un objet 
+- Permettre aux Suisses de l'étranger (SE) d'apporter un soutien pour un objet 
 - Rétablir l'égalité des chances entre les petits et les grands comités
 
 ### Philosophie

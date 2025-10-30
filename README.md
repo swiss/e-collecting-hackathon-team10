@@ -174,13 +174,27 @@ sequenceDiagram
 
 * Inclusion des jeunes : génération Digital Native plus encline à participer sur des canaux digitaux que papier
 
-* Pas de dépendance à une entreprise américaine
+* Pas de dépendance à une entreprise US
 
-* Pas de frais de maintenance liée à un App.
+* Pas de frais de maintenance liée à un APP.
 
-### Weaknesses:
-- ...
-- ...
+### Weaknesses / Faiblesse de la solution proposée :
+* Système basé sur un registre centralisé, si des cantons ou des communes souhaitent reprendre le concept, il est nécessaire d’avoir un registre électoral qui soit au final centralisé au niveau du canton ou au niveau fédéral.
+
+### Weaknesses / Faiblesses pour le Ecollecting en général  :
+* Pression sociale digitale : risque de campagnes de harcèlement en ligne pour signer
+
+* Confidentialité perçue : même si légal, certains citoyens peuvent craindre la traçabilité numérique
+
+* Résistance culturelle : attachement au rituel de la signature papier en rue. Moins de mobilisation de terrain = moins de débat public ?
+
+* Polarisation accrue : facilitation = plus d'objets = saturation de l'agenda politique ?
+
+* Support utilisateur : hotline/FAQ à dimensionner correctement
+
+* Risque d’augmentation du nombre d’aboutissement des initiatives et de référendums
+
+* Risque de lassitude des électrices et électeurs
 
 ## Getting Started
 

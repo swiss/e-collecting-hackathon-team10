@@ -100,35 +100,6 @@ flowchart TD
 
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
-*A step-by-step illustration showing how data and requests are exchanged between actors (customer, delivery site, restaurant, infrastructure), and key software components in the order process.*
-
-```mermaid
-
-sequenceDiagram
-    actor Customer
-    participant WebApp as "Delivery Website (UI)"
-    participant Backend as "Backend Server"
-    participant DB as "Order Database"
-    participant Restaurant as "Restaurant System"
-    actor Driver as "Delivery Driver"
-
-    Customer->>WebApp: Browse menu, select pizza (menu data)
-    Customer->>WebApp: Submit order (pizza, address, payment info)
-    WebApp->>Backend: Create order {pizza, address, payment}
-    Backend->>DB: Save order {orderId, customer, items, payment}
-    Backend->>Restaurant: API: send order {orderId, items, address}
-    Restaurant-->>Backend: Ack/Confirmation {orderId, ETA}
-    Backend-->>WebApp: Show confirmation {orderId, ETA}
-    WebApp-->>Customer: Order confirmation {orderId, ETA}
-    Restaurant->>Driver: Notify driver {pickup, delivery}
-    Driver-->>Restaurant: Pickup ack
-    Driver->>Customer: Deliver pizza
-    Driver->>Backend: Update status {orderId, delivered}
-    Backend->>WebApp: Status update {delivered}
-    WebApp->>Customer: Show status {delivered}
-
-```
-
 ## User Experience
 
 *Add or reference wireframes or mockups with user flow showing the user experience of different actors.*

@@ -71,31 +71,39 @@ Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d
 
 *For your reference, you will find below an example of two diagrams showing interactions and data flows between actors, software and infrastructure components of ordering a pizza via a third-party delivery website over time. Please replace them with diagrams for your solution.*
 
-### Flowchart: High-level Process (Example)
-
-*An overall process flow showing the main steps and system/actor interactions for ordering a pizza online via a delivery website, including software, infrastructure, and handoff to the restaurant and delivery driver.*
+### Flowchart: traitement des initiatives / référendum papier
 
 ```mermaid
 
 flowchart TD
-    Customer([Customer])
-    DeliverySite("Delivery Website (Web/App)")
-    Backend("Website Backend Server")
-    OrderDB[(Order Database)]
-    Restaurant("Restaurant Order System")
-    Driver("Delivery Driver")
-
-   Customer-->|"1 Place Order (Pizza+Details)"|DeliverySite
-   DeliverySite-->|"2 Send Order Data"|Backend
-   Backend-->|"3 Store Order"|OrderDB
-   Backend-->|"4 Send Order to Restaurant"|Restaurant
-   Restaurant-->|"5 Ack/Confirmation"|Backend
-   Backend-->|"6 Confirmation & ETA"|DeliverySite
-   DeliverySite-->|"7 Show Confirmation"|Customer
-   Restaurant-->|"8 Assign/Notify Delivery"|Driver
-   Driver-->|"9 Pickup & Deliver"|Customer
-   Driver-->|"10 Update Status"|DeliverySite
-   DeliverySite-->|"11 Show Status"|Customer
+    S[Dépôt/envoi formules/listes de récoltes des signatures] --> D
+    D(Dater et numéroter feuilles) --> C
+    C(Sélectioner IN ou REF à contrôler) --> T
+    T{Traiter les attestations
+    Rechercher personne}
+    T -->|OK| TOK[Signature valable] --> E
+    T -->|KO| TKOa[a. illisible] --> E
+    T -->|KO| TKOb[b. non identifiable] --> E
+    T -->|KO| TKOc[c. signature donnée plusieurs fois] --> E
+    T -->|KO| TKOd[d. de la même main] --> E
+    T -->|KO| TKOe[e. nom et/ou prénoms et/ou signature non écrits à la main par l'électeur concerné] --> E
+    T -->|KO| TKOf{f. non inscrit au registre électoral} --> E
+    TKOf --> TKOf1[f1. pas de droit de vote] --> E
+    TKOf --> TKOf2[f2. mineur] --> E
+    TKOf --> TKOf3[f3. non domicilié dans la commune] --> E
+    TKOf --> TKOf4[f4. décédé] --> E
+    TKOf --> TKOf5[f5. mandat pour cause d'inaptitude ou curatelle] --> E
+    TKOf --> TKOf6[f6. signataire n'ayant pas le droit de vote dans la commune...] --> E
+    T -->|KO| TKOg[g. absence de signature manuscrite] --> E
+    T -->|KO| TKOh[h. date de naissance erronée] --> E
+    T -->|KO| TKOi[i. signature déjà biffée sur la liste que la commune a reçue] --> E
+	E(Enregistrement dans le système informatique) --> I
+	I(Inscrire le vu ou le code d'erreur) --> TF
+	TF{Si fédéral}
+	TF --> |Fédéral| RF(Etablir une attestation collective ) --> P
+	TF --> |Cantonal ou communal| RC(Etablir le décompte complet) --> FIN
+	P[Renvoyer à l'expéditeur] --> FIN
+	FIN[Fin du traitement d'un lot]
 
 ```
 

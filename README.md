@@ -56,6 +56,9 @@ Destruction des données conformément à la LEDP.
 Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d'APP sur Google ou Applestore :
 - Pour ne pas avoir de dépendance à un système US
 - Pour ne pas avoir de frais de maintenance récurrents à toute APP
+  
+## PITCH DE LA SOLUTION 
+
 
 ## Documentation and Diagrams
 

@@ -145,7 +145,7 @@ flowchart TD
     
     V --> Z[Fin ou retour menu principal]
     
-    style B fill:#e3f2fd
+    
     style J fill:#fff9c4
     style T fill:#c8e6c9
     style R fill:#ffccbc

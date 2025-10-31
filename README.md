@@ -144,14 +144,20 @@ sequenceDiagram
 
 ## Topics addressed
 
-*Explain how you addressed the topics presented in the [guidelines](https://www.bk.admin.ch/bk/de/home/politische-rechte/e-collecting/aktuelles.html), filling in the template below.*
+# Tableau des Topics
 
-| Topic | (How) is it addressed? |
-| -| ------- |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| ... |  |
+| Topic | Titre | Comment la solution proposée répond |
+|-------|-------|-------------------------------------|
+| 1 | « De la volonté de soutien à la déclaration de soutien » | Le comité pourra déposer une demande de lancement d'IN ou de REF en ligne. Après validation par la chancellerie et publication dans la feuille d'avis officielle (FAO), la récolte de soutiens pourra être ouverte en ligne. (cf. portail mandataire, ce thème ne sera pas couvert durant le hackathon)<br><br>Le dépôt d'un soutien via l'e-collecting se fait uniquement au travers du device de la personne citoyenne ou du citoyen même dans la rue.<br><br>Il ne faut pas dupliquer le formulaire papier en ligne sur du digital dans la rue.<br>Réflexion en cours sur l'utilisation de QR code, pour accéder au formulaire de récolte sur la plateforme e-Gov genevoise. |
+| 2 | « Accès aux informations concernant les déclarations de soutien déposées » | Le comité pourra avoir le nombre de signatures valables récoltées en ligne.<br><br>Pas d'agrégation des signatures papier et électronique.<br>Pas de transmission d'informations concernant les informations géographiques ou les motifs d'invalidité (il ne peut pas y avoir de soutiens non-valables en ligne).<br>Les motifs d'invalidité sont sujets à recours à GE et sont du ressort du Conseil d'Etat. |
+| 3 | « Attribution des attestations de soutien aux comités et aux entreprises de récolte » | Au niveau cantonal/communal à Genève cette problématique n'existe pas.<br>Pour le niveau fédéral, c'est un sujet à discuter.<br>Une solution de type auto-complétion permettant de récupérer des saisies faites par d'autres personnes peut être envisagée. |
+| 4 | « Diffusion des arguments des comités via le logiciel de récolte électronique de signatures » | Les arguments du comité sont un point de vigilance dans la solution.<br>Problématique du lien url du comité non maîtrisé par les autorités. Il faut indiquer que les autorités ne sont pas responsables des informations données par le comité.<br>Réflexion pour ne proposer que des pdf non modifiables mais accessibles pour les personnes en situation de handicap. Cela nécessite de la part des comités de réaliser des pdf accessibles.<br>C'est une question actuellement ouverte. |
+| 5 | « Exclusion des attestations de soutien illicites » | La personne s'identifie sur le portail e-Gov cantonal à l'aide d'une identité électronique.<br>La solution d'e-collecting sera connectée directement, via des webservices, au back-office cantonal de contrôle des signatures et au rôle électoral. Les personnes pourront soutenir que les IN/REF pour lesquelles elles ont les droits politiques. Sur la base de la première signature enregistrée (papier ou électronique), la personne pourra apporter son soutien qu'une seule fois. |
+| 6 | « Prévention des attestations de soutien non dépouillées » | Simple pour CHA. Délai de transmission à la ChF? |
+| 7 | « Respect du secret du vote » | Actuellement, sur le mode papier, il n'y a pas de secret de la signature et encore moins du vote.<br>Apposer sa signature n'est pas un équivalent au vote. En effet, on peut soutenir en apportant sa signature, la mise à l'agenda politique sans forcément voter au final en faveur de l'objet lorsqu'il sera soumis en votation.<br>= Niveau 0 |
+| 8 | « Intégration avec le processus papier » | Actuellement toutes les signatures papier sont enregistrées dans un système informatique dédié. Elles sont ensuite détruites en l'absence de recours selon le droit en vigueur.<br>Les signatures en ligne seront enregistrées dans le même système dédié via un interfaçage.<br>L'e-collecting genevois sera une fonctionnalité supplémentaire à celles offertes, par le logiciel de contrôle des signatures papier.<br>Il s'agit de la même approche que pour le e-voting et les autres canaux de votes. |
+| 9 | « Introduction facilitée pour les communes avec un gain d'efficacité ; sur la base des infrastructures et des processus existants » | À Genève, le contrôle des signatures, au niveau fédéral, cantonal et communal, est centralisé au niveau du canton. |
+| 10 | « Récolte électronique pour tous les niveaux fédéraux » | Idem 9 |
 
 ## Key Strenghts and Weaknesses
 

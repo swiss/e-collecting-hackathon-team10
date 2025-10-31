@@ -97,6 +97,60 @@ flowchart TD
 	FIN[Fin du traitement d'un lot]
 
 ```
+### Flowchart: Parcours utilisateur - nominal
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff'}}}%%
+flowchart TD
+    A[Connexion e-démarches Genève]
+	
+    A --> D[Accès à la prestation e-collecting]
+    
+    D --> E["Affichage informations de l'utilisateur<br/>Electeur [genre + nom]<br/>Commune: [nom de la commune]"]
+    E --> F[Liste des objets en cours de récolte]
+    
+    F --> G{Type d'objet}
+    G -->|Communal| H1[Objets communaux]
+    G -->|Cantonal| H2[Objets cantonaux]
+    G -->|Fédéral| H3[Objets fédéraux]
+    
+    H1 --> I[Clic sur un objet]
+    H2 --> I
+    H3 --> I
+    
+    I --> J[Affichage du texte de l'initiative/référendum]
+    J --> URL["URL externe comité d'initiative/référendaire<br/>FACULTATIF"]
+    URL --> URLC{Électeur clique<br/>sur URL externe?}
+    URLC -->|OUI| URLO[Ouverture nouvel onglet<br/>Site externe du comité]
+    URLC -->|NON| L[Affichage mentions légales]
+    
+    URLO --> P[Retour onglet e-démarches]
+    P --> L
+    
+    L --> Q[Clic sur Je soutiens]
+    Q --> R[Pop-up de confirmation]
+    
+    R --> S{Choix électeur}
+    S -->|OUI| T["Enregistrement du soutien<br/>Date/Heure affichée [jj.mm.aaaa hh:ii]"]
+    S -->|ANNULER| U[Annulation]
+    
+    T --> V[Réaffichage automatique<br/>Liste objets en cours]
+    U --> V
+    
+    V --> W{Même objet<br/>cliqué à nouveau?}
+    W -->|Oui| X["Pop-up:<br/>Soutien déjà enregistré Date/Heure affichée [jj.mm.aaaa hh:ii] et canal [papier/électronique]"]
+    W -->|Non| Y[Sélection autre objet]
+    
+    X --> V
+    Y --> I
+    
+    V --> Z[Fin ou retour menu principal]
+    
+    style B fill:#e3f2fd
+    style J fill:#fff9c4
+    style T fill:#c8e6c9
+    style R fill:#ffccbc
+    style X fill:#ffccbc
+```
 
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 

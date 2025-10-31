@@ -61,42 +61,53 @@ Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d
 <a href="docs/presentation_PITCH_-recolte-signatures-V2.pdf"><img src="docs/pitch-illustration.png" alt="Image illustration PowerPoint pitch"></a>
 
 ## Documentation and Diagrams
-
-### Flowchart: traitement des initiatives / référendum papier
-
+### Architecture : plateforme e-Gov et applicatif contrôle des signatures
 ```mermaid
+graph TB
+    subgraph Internet["Zone Internet (accessible publiquement)"]
+        subgraph "Plateforme e-gov"
+            EID["e-ID<br/>Application"]
+            Impots["Impôts<br/>Application"]
+            
+            subgraph "e-collecting"
+                ECollecting["e-collecting<br/>Application"]
+            end
+        end
+    end
+    
+    subgraph Interne["Zone Réseau Interne"]
+        Population[("Population<br/>Base de données")]
+        Droits[("Droits<br/>Registre centralisé<br/>Base de données")]
+        ROP[("Référentiel IN/REF<br/>Base de données")]
+        CoS["Contrôle signatures<br/>Application"]
+		CoSDB[("Contrôle signatures<br/>Base de données")]
+    end
 
-flowchart TD
-    S[Dépôt/envoi formules/listes de récoltes des signatures] --> D
-    D(Dater et numéroter feuilles) --> C
-    C(Sélectioner IN ou REF à contrôler) --> T
-    T{Traiter les attestations
-    Rechercher personne}
-    T -->|OK| TOK[Signature valable] --> E
-    T -->|KO| TKOa[a. illisible] --> E
-    T -->|KO| TKOb[b. non identifiable] --> E
-    T -->|KO| TKOc[c. signature donnée plusieurs fois] --> E
-    T -->|KO| TKOd[d. de la même main] --> E
-    T -->|KO| TKOe[e. nom et/ou prénoms et/ou signature non écrits à la main par l'électeur concerné] --> E
-    T -->|KO| TKOf{f. non inscrit au registre électoral} --> E
-    TKOf --> TKOf1[f1. pas de droit de vote] --> E
-    TKOf --> TKOf2[f2. mineur] --> E
-    TKOf --> TKOf3[f3. non domicilié dans la commune] --> E
-    TKOf --> TKOf4[f4. décédé] --> E
-    TKOf --> TKOf5[f5. mandat pour cause d'inaptitude ou curatelle] --> E
-    TKOf --> TKOf6[f6. signataire n'ayant pas le droit de vote dans la commune...] --> E
-    T -->|KO| TKOg[g. absence de signature manuscrite] --> E
-    T -->|KO| TKOh[h. date de naissance erronée] --> E
-    T -->|KO| TKOi[i. signature déjà biffée sur la liste que la commune a reçue] --> E
-	E(Enregistrement dans le système informatique) --> I
-	I(Inscrire le vu ou le code d'erreur) --> TF
-	TF{Si fédéral}
-	TF --> |Fédéral| RF(Etablir une attestation collective ) --> P
-	TF --> |Cantonal ou communal| RC(Etablir le décompte complet) --> FIN
-	P[Renvoyer à l'expéditeur] --> FIN
-	FIN[Fin du traitement d'un lot]
-
+    
+    EID --> Impots
+    EID --> ECollecting
+    ECollecting --> Droits
+    ECollecting --> Population
+    ECollecting --> ROP
+    CoS --> Droits
+    CoS --> Population
+    CoS --> ROP
+	CoS --> CoSDB
+    CoS --> Papier
+    
+    style Internet fill:#ffcccc,stroke:#cc0000,stroke-width:3px
+    style Interne fill:#cce5ff,stroke:#0066cc,stroke-width:3px
+    style Population fill:#90EE90,stroke:#333,stroke-width:2px
+    style Droits fill:#90EE90,stroke:#333,stroke-width:2px
+    style ROP fill:#90EE90,stroke:#333,stroke-width:2px
+    style EID fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style Impots fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style ECollecting fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style CoS fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style CoSDB fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style Papier fill:#D3D3D3,stroke:#333,stroke-width:2px
 ```
+
 ### Flowchart: E-collecting : Parcours utilisateur - nominal
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff'}}}%%
@@ -192,6 +203,43 @@ flowchart TD
     style CONFIRM fill:#c8e6c9
     style F fill:#e3f2fd
 ```
+
+### Flowchart: traitement des initiatives / référendum papier
+
+```mermaid
+
+flowchart TD
+    S[Dépôt/envoi formules/listes de récoltes des signatures] --> D
+    D(Dater et numéroter feuilles) --> C
+    C(Sélectioner IN ou REF à contrôler) --> T
+    T{Traiter les attestations
+    Rechercher personne}
+    T -->|OK| TOK[Signature valable] --> E
+    T -->|KO| TKOa[a. illisible] --> E
+    T -->|KO| TKOb[b. non identifiable] --> E
+    T -->|KO| TKOc[c. signature donnée plusieurs fois] --> E
+    T -->|KO| TKOd[d. de la même main] --> E
+    T -->|KO| TKOe[e. nom et/ou prénoms et/ou signature non écrits à la main par l'électeur concerné] --> E
+    T -->|KO| TKOf{f. non inscrit au registre électoral} --> E
+    TKOf --> TKOf1[f1. pas de droit de vote] --> E
+    TKOf --> TKOf2[f2. mineur] --> E
+    TKOf --> TKOf3[f3. non domicilié dans la commune] --> E
+    TKOf --> TKOf4[f4. décédé] --> E
+    TKOf --> TKOf5[f5. mandat pour cause d'inaptitude ou curatelle] --> E
+    TKOf --> TKOf6[f6. signataire n'ayant pas le droit de vote dans la commune...] --> E
+    T -->|KO| TKOg[g. absence de signature manuscrite] --> E
+    T -->|KO| TKOh[h. date de naissance erronée] --> E
+    T -->|KO| TKOi[i. signature déjà biffée sur la liste que la commune a reçue] --> E
+	E(Enregistrement dans le système informatique) --> I
+	I(Inscrire le vu ou le code d'erreur) --> TF
+	TF{Si fédéral}
+	TF --> |Fédéral| RF(Etablir une attestation collective ) --> P
+	TF --> |Cantonal ou communal| RC(Etablir le décompte complet) --> FIN
+	P[Renvoyer à l'expéditeur] --> FIN
+	FIN[Fin du traitement d'un lot]
+
+```
+
 
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 

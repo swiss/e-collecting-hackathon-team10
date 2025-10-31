@@ -152,6 +152,47 @@ flowchart TD
     style X fill:#ffccbc
 ```
 
+### Flowchart : Dénonciation d'une fraude à la signature papier
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff'}}}%%
+flowchart TD
+    E["Affichage informations de l'utilisateur<br/>Électeur [genre + nom]<br/>Commune: [nom de la commune]"]
+    
+    E --> F["Liste des objets en cours de récolte<br/>✓ Indicateur visuel (vu vert) pour objets signés"]
+    
+    F --> G{Type d'objet}
+    G -->|Communal| H1[Objets communaux]
+    G -->|Cantonal| H2[Objets cantonaux]
+    G -->|Fédéral| H3[Objets fédéraux]
+    
+    H1 --> I[Clic sur un objet déjà signé sur papier]
+    H2 --> I
+    H3 --> I
+    
+    I --> X["Pop-up: Soutien déjà enregistré<br/>Date/Heure [jj.mm.aaaa hh:ii]<br/>Canal: papier<br/><br/>Si vous n'avez pas signé ce document,<br/>vous pouvez déclarer une fraude"]
+    
+    X --> CHOIX{Choix utilisateur}
+    CHOIX -->|Déclarer une fraude| FRAUDE["Écran de déclaration de fraude<br/>---<br/>Objet concerné: [nom]<br/>Date signature papier: [jj.mm.aaaa hh:ii]<br/>---<br/>Formulaire de déclaration<br/>---<br/>Lien: Plus d'informations"]
+    CHOIX -->|Fermer/Retour| V[Retour à la liste des objets]
+    
+    FRAUDE --> LIEN{Clic sur<br/>Plus d'informations?}
+    LIEN -->|OUI| EXTERNE[Ouverture nouvel onglet<br/>Informations légales/procédure]
+    LIEN -->|NON| ACTION_FRAUDE{Action utilisateur}
+    
+    EXTERNE --> RETOUR_TAB[Retour onglet e-démarches]
+    RETOUR_TAB --> ACTION_FRAUDE
+    
+    ACTION_FRAUDE -->|Annuler| X
+    ACTION_FRAUDE -->|Déposer| CONFIRM["Message de confirmation<br/>Déclaration de fraude enregistrée"]
+    
+    CONFIRM --> V
+            
+    style X fill:#ffccbc
+    style FRAUDE fill:#fff9c4
+    style CONFIRM fill:#c8e6c9
+    style F fill:#e3f2fd
+```
+
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience

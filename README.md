@@ -192,7 +192,7 @@ Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of condu
 
 - Valérie Vulliez Boget/GitHub Account (role)
 - Olivier Leclère / OlivierLeclereGE
-- Name/GitHub Account (role)
+- Lucia Italiano/luciaitaliano73-oss (UX and Digital Governance)
 - ...
 
 ## License

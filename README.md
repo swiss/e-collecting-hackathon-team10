@@ -57,22 +57,10 @@ Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d
 - Pour ne pas avoir de dépendance à un système US
 - Pour ne pas avoir de frais de maintenance récurrents à toute APP
   
-## PITCH DE LA SOLUTION 
-
+## Pitch de la solution
+<a href="docs/presentation_PITCH_-recolte-signatures-V2.pdf"><img src="docs/pitch-illustration.png" alt="Image illustration PowerPoint pitch"></a>
 
 ## Documentation and Diagrams
-
-*Together, you will contribute to comparing different ways of how to implement e-collecting in Switzerland from A to Z. As part of the [participatory process](https://www.bk.admin.ch/bk/de/home/politische-rechte/e-collecting/partizipativer_prozess.html), your solutions will be discussed in subsequent workshops and will possibly be taken into account for the official decision on the design of the federal e-collecting trials. Proper documentation is key to ensuring that your solution can be understood and evaluated:*
-
-1. **[Mermaid](https://mermaid.js.org/) diagram(s) showing interactions and data flows between actors, software and infrastructure components of your solution over time.**
-2. **Wireframes or mockups with user flow showing the user experience of different actors** (using e.g. Figma)
-3. Explain how you addressed the topics presented in the [guidelines](https://www.bk.admin.ch/bk/de/home/politische-rechte/e-collecting/aktuelles.html), filling in the template below.
-4. List the key strengths and weaknesses of your solution.
-5. Explanation of features used (if applicable)
-6. A requirements file with all packages and versions used (if applicable)
-7. Environment code to be run (if applicable)
-
-*For your reference, you will find below an example of two diagrams showing interactions and data flows between actors, software and infrastructure components of ordering a pizza via a third-party delivery website over time. Please replace them with diagrams for your solution.*
 
 ### Flowchart: traitement des initiatives / référendum papier
 

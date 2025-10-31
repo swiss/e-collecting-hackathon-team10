@@ -97,7 +97,7 @@ flowchart TD
 	FIN[Fin du traitement d'un lot]
 
 ```
-### Flowchart: Parcours utilisateur - nominal
+### Flowchart: E-collecting : Parcours utilisateur - nominal
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff'}}}%%
 flowchart TD

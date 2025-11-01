@@ -246,7 +246,10 @@ flowchart TD
 
 ## User Experience
 
-*Add or reference wireframes or mockups with user flow showing the user experience of different actors.*
+<video width="640" height="480" controls>
+  <source src="ux/e-collecting-ge-V1.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
 
 ## Topics addressed
 

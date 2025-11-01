@@ -248,6 +248,15 @@ flowchart TD
 
 ## User Experience
 <img src="ux/00.png" alt="Authentification">
+<img src="ux/01.png" alt="Authentification">
+<img src="ux/02.jpeg" alt="Authentification">
+<img src="ux/03.jpeg" alt="Authentification">
+<img src="ux/04.jpeg" alt="Authentification">
+<img src="ux/05.jpeg" alt="Authentification">
+<img src="ux/06.jpeg" alt="Authentification">
+<img src="ux/07.jpeg" alt="Authentification">
+<img src="ux/08.jpeg" alt="Authentification">
+<img src="ux/09.jpeg" alt="Authentification">
 
 ## Topics addressed
 

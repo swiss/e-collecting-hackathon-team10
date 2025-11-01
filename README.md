@@ -247,8 +247,7 @@ flowchart TD
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience
-Vidéo de présentation du processus de signature
-<a href="ux/e-collecting-ge-V1.mp4"><img src="ux/03.jpeg" alt="Image illustration vidéo démo"></a>
+<img src="docs/image-dossier-900x450.jpg" alt="Téléphone avec accès e-démarches">
 
 ## Topics addressed
 

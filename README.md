@@ -88,6 +88,7 @@ graph TB
     ECollecting --> Droits
     ECollecting --> Population
     ECollecting --> ROP
+	ECollecting --> CoSDB
     CoS --> Droits
     CoS --> Population
     CoS --> ROP

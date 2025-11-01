@@ -1,4 +1,5 @@
 # 10) Le système récolte des signatures sur le portail e-Gov genevois
+<img src="docs/pitch-illustration.png" alt="Image illustration PowerPoint pitch">
 
 ## Approach / Notre proposition 
 

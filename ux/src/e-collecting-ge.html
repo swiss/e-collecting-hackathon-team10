@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-démarches - Soutien initiatives et référendums - République et canton de Genève</title>
+    <link rel="stylesheet" href="e-collecting/inc/styles-accessible.css">
+    <style>
+        /* Styles pour le menu latéral */
+        .layout-with-sidebar {
+            display: flex;
+            min-height: calc(100vh - 150px);
+            gap: 0;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: #f8f9fa;
+            border-right: 1px solid var(--md-sys-color-outline-variant);
+            flex-shrink: 0;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            background: white;
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        .sidebar-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--md-sys-color-on-background);
+            margin: 0;
+        }
+
+        .sidebar-nav {
+            padding: 0;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav-item {
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        .sidebar-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            color: var(--md-sys-color-on-background);
+            text-decoration: none;
+            transition: background-color 0.2s;
+            font-size: 1rem;
+        }
+
+        .sidebar-nav-link:hover {
+            background: #e9ecef;
+        }
+
+        .sidebar-nav-link:focus {
+            outline: 3px solid var(--md-sys-color-primary);
+            outline-offset: -3px;
+        }
+
+        .sidebar-nav-link.active {
+            background: white;
+            font-weight: 600;
+        }
+
+        .sidebar-nav-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-nav-arrow {
+            margin-left: auto;
+            font-size: 1.2rem;
+            color: var(--md-sys-color-secondary);
+        }
+
+        .sidebar-section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: #e9ecef;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--md-sys-color-on-background);
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar-section-title:hover {
+            background: #dee2e6;
+        }
+
+        .sidebar-section-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-section-arrow {
+            margin-left: auto;
+            transition: transform 0.2s;
+        }
+
+        .sidebar-section-arrow.expanded {
+            transform: rotate(180deg);
+        }
+
+        .sidebar-subsection {
+            background: white;
+        }
+
+        .sidebar-subsection-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 1.5rem 0.875rem 3.5rem;
+            color: var(--md-sys-color-on-background);
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            transition: background-color 0.2s;
+        }
+
+        .sidebar-subsection-link:hover {
+            background: #f8f9fa;
+        }
+
+        .sidebar-subsection-link:focus {
+            outline: 3px solid var(--md-sys-color-primary);
+            outline-offset: -3px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2.5rem 3.75rem;
+            max-width: calc(100% - 300px);
+        }
+
+        /* Ajustement du container principal */
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 48rem) {
+            .layout-with-sidebar {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            }
+
+            .main-content {
+                max-width: 100%;
+                padding: 1.5rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <a id="brand-logo" href="https://www.ge.ch" title="Retour à la page d'accueil de la République et canton de Genève" rel="home">
+            <img src="e-collecting/inc/logo_ge.svg" alt="Logo de la République et canton de Genève">
+        </a>
+        <div id="brand-title">
+            <div id="ge-filigrane">
+                <a href="https://www.ge.ch" rel="home">ge.ch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout avec sidebar -->
+    <div class="layout-with-sidebar">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Mon espace e-démarches</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link active">
+                            <span class="sidebar-nav-icon">🏠</span>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">📋</span>
+                            <span>Mes démarches</span>
+                            <span class="sidebar-nav-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">📁</span>
+                            <span>Mes documents</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">💬</span>
+                            <span>Ma messagerie</span>
+                            <span class="sidebar-nav-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">📊</span>
+                            <span>Mes situations</span>
+                            <span class="sidebar-nav-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">👤</span>
+                            <span>Mon profil</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">ℹ️</span>
+                            <span>En savoir plus</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">❓</span>
+                            <span>Aide</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Section "Mes autres espaces" -->
+                <button class="sidebar-section-title" onclick="toggleSection(this)" aria-expanded="true">
+                    <span class="sidebar-section-icon">⊞</span>
+                    <span>Mes autres espaces</span>
+                    <span class="sidebar-section-arrow expanded">▾</span>
+                </button>
+                <div class="sidebar-subsection">
+                    <a href="#" class="sidebar-subsection-link">
+                        <span class="sidebar-nav-icon">🔗</span>
+                        <span>Mon espace fiscal</span>
+                    </a>
+                    <a href="#" class="sidebar-subsection-link">
+                        <span class="sidebar-nav-icon">🔗</span>
+                        <span>Mon espace subventions culturelles</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <!-- Page liste -->
+            <div id="listPage" class="list-page">
+                <!-- En-tête utilisateur -->
+                <section class="user-header" aria-labelledby="user-info-heading">
+                    <h1 id="user-info-heading" class="user-info">Monsieur Jean Dupont</h1>
+                    <p class="user-commune">Commune de Bardonnex</p>
+                </section>
+
+                <!-- Informations d'utilisation -->
+                <aside class="info-box" role="note" aria-labelledby="info-heading">
+                    <h2 id="info-heading" class="info-box-title">Informations d'utilisation</h2>
+                    <p>Vous pouvez soutenir une initiative ou un référendum à la fois dans la liste proposée ci-après.</p>
+                </aside>
+
+                <!-- Titre de section -->
+                <h2 class="main-heading">Liste des objets en cours de récolte</h2>
+
+                <!-- Liste des niveaux -->
+                <div class="objects-list">
+                    <!-- Niveau FÉDÉRAL -->
+                    <section class="level-section" aria-labelledby="federal-heading">
+                        <div class="level-header">
+                            <svg class="coat-of-arms" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <rect width="48" height="48" fill="#DA0000"/>
+                                <rect x="18" y="10" width="12" height="28" fill="white"/>
+                                <rect x="10" y="18" width="28" height="12" fill="white"/>
+                            </svg>
+                            <h3 id="federal-heading" class="level-title">Fédéral</h3>
+                        </div>
+                        <div class="objects-container">
+                            <p class="no-objects">Aucune récolte en cours</p>
+                        </div>
+                    </section>
+
+                    <!-- Niveau CANTONAL -->
+                    <section class="level-section" aria-labelledby="cantonal-heading">
+                        <div class="level-header">
+                            <img src="e-collecting/inc/logo_ge.svg" alt="" class="logo-ge" aria-hidden="true">
+                            <h3 id="cantonal-heading" class="level-title">Cantonal</h3>
+                        </div>
+                        <div class="objects-container">
+                            <!-- Initiative cantonale -->
+                            <article class="object-card">
+                                <button 
+                                    class="object-card-button" 
+                                    onclick="showDetail('cantonal-initiative-1')"
+                                    aria-label="Voir les détails de l'initiative populaire : Initiative piétonne">
+                                    <span class="object-type">Initiative populaire</span>
+                                    <h4 class="object-title">
+                                        <span class="signed-indicator" id="signed-cantonal-initiative-1" style="display:none;" aria-label="Déjà signé">✓</span>
+                                        <span>IN « Initiative piétonne »</span>
+                                    </h4>
+                                </button>
+                            </article>
+
+                            <!-- Référendum cantonal -->
+                            <article class="object-card">
+                                <button 
+                                    class="object-card-button" 
+                                    onclick="showDetail('cantonal-referendum-1')"
+                                    aria-label="Voir les détails du référendum : Loi 10843 modifiant les limites de zones sur le territoire de la commune de Vernier">
+                                    <span class="object-type">Référendum</span>
+                                    <h4 class="object-title">
+                                        <span class="signed-indicator" id="signed-cantonal-referendum-1" style="display:none;" aria-label="Déjà signé">✓</span>
+                                        <span>Loi 10843 modifiant les limites de zones sur le territoire de la commune de Vernier</span>
+                                    </h4>
+                                    <p class="object-subtitle">(création d'une zone de développement 3 entre l'avenue Louis-Casaï et le chemin des Corbillettes)</p>
+                                </button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Niveau COMMUNAL -->
+                    <section class="level-section" aria-labelledby="communal-heading">
+                        <div class="level-header">
+                            <img src="e-collecting/inc/logo-bardonnex.png" alt="" class="logo-commune" aria-hidden="true">
+                            <h3 id="communal-heading" class="level-title">Communal</h3>
+                        </div>
+                        <div class="objects-container">
+                            <!-- Référendum communal -->
+                            <article class="object-card">
+                                <button 
+                                    class="object-card-button" 
+                                    onclick="showDetail('communal-referendum-1')"
+                                    aria-label="Voir les détails du référendum communal contre la délibération du Conseil municipal de Bardonnex">
+                                    <span class="object-type">Référendum communal</span>
+                                    <h4 class="object-title">
+                                        <span class="signed-indicator" id="signed-communal-referendum-1" style="display:none;" aria-label="Déjà signé">✓</span>
+                                        <span>Référendum contre la délibération du Conseil municipal de Bardonnex</span>
+                                    </h4>
+                                    <p class="object-subtitle">du 2 septembre 2025, adoptant le règlement relatif à l'affichage et au concept directeur de la commune de Bardonnex</p>
+                                </button>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Page détail -->
+            <div id="detailPage" class="detail-page" aria-live="polite">
+                <button class="back-button" onclick="showList()" aria-label="Retour à la liste des objets">
+                    <span aria-hidden="true">←</span> Retour à la liste
+                </button>
+
+                <!-- En-tête -->
+                <header class="detail-header">
+                    <div class="detail-type">
+                        <img src="e-collecting/inc/logo_ge.svg" alt="" class="logo-ge" aria-hidden="true">
+                        <div>
+                            <p class="object-type" id="detailObjectType"></p>
+                        </div>
+                    </div>
+                    <h2 class="detail-title" id="detailTitle"></h2>
+                </header>
+
+                <!-- Texte de l'objet -->
+                <section class="detail-text" aria-labelledby="detail-text-heading">
+                    <h3 id="detail-text-heading" class="visually-hidden">Description de l'objet</h3>
+                    <div id="detailText"></div>
+                </section>
+                
+                <!-- Comité -->
+                <section class="comitee" aria-labelledby="comite-heading">
+                    <h3 id="comite-heading">Comité</h3>
+                    <p id="comiteMembers"></p>
+                </section>
+                
+                <!-- Mentions légales -->
+                <aside class="legal-notice" role="note" aria-labelledby="legal-heading">
+                    <h3 id="legal-heading">MENTIONS LÉGALES</h3>
+                    <p>
+                        Celui qui appose une autre signature que la sienne ou plus d'une signature est passible d'une amende administrative pouvant s'élever à 100 F. 
+                        Les signatures obtenues par un procédé réprimé par la loi doivent être annulées (art. 87, al. 1, lettre b, et art. 91 de la loi sur l'exercice des droits politiques, du 15 octobre 1982).
+                    </p>
+                </aside>
+
+                <!-- Lien externe -->
+                <div class="external-link-box">
+                    <a href="#" id="externalLink" target="_blank" rel="noopener noreferrer" class="external-link">
+                        <span aria-hidden="true">🔗</span>
+                        <span>Consulter les arguments du comité</span>
+                        <span class="visually-hidden">(ouverture dans une nouvelle fenêtre)</span>
+                    </a>
+                    <button class="tooltip" aria-label="Plus d'informations sur le lien externe">
+                        <span class="tooltip-icon" aria-hidden="true">?</span>
+                        <span class="tooltip-text" role="tooltip">
+                            Il s'agit d'un site externe. L'État de Genève n'est pas responsable des informations fournies par le comité d'initiative.
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Bouton soutien -->
+                <button class="support-button" onclick="confirmSupport()">Je soutiens</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div id="modalConfirm" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title">
+        <div class="modal">
+            <h2 id="modal-confirm-title" class="modal-title">Je confirme mon soutien</h2>
+            <div class="modal-content">
+                <p>Voulez-vous confirmer votre soutien à cet objet ?</p>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-button modal-button-secondary" onclick="cancelSupport()">Annuler</button>
+                <button class="modal-button modal-button-primary" onclick="validateSupport()">Oui</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal déjà signé -->
+    <div id="modalAlreadySigned" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-signed-title">
+        <div class="modal">
+            <h2 id="modal-signed-title" class="modal-title">Soutien déjà enregistré</h2>
+            <div class="modal-content">
+                <div class="signature-info" role="region" aria-label="Informations de signature">
+                    <div><strong>Date :</strong> <span id="signatureDate">--</span></div>
+                    <div><strong>Heure :</strong> <span id="signatureTime">--</span></div>
+                    <div>
+                        <strong>Canal :</strong> 
+                        <span class="signature-mode" id="signatureMode">ÉLECTRONIQUE</span>
+                    </div>
+                </div>
+                <div class="fraud-warning" role="alert">
+                    <p><strong>Si vous n'avez pas signé ce document, vous pouvez déclarer une fraude.</strong></p>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-button modal-button-primary" onclick="closeModal()">Fermer</button>
+                <button class="modal-button modal-button-danger" onclick="showFraudDeclaration()">Déclarer une fraude</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal déclaration de fraude -->
+    <div id="modalFraudDeclaration" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-fraud-title">
+        <div class="modal" style="max-width: 37.5rem;">
+            <h2 id="modal-fraud-title" class="modal-title">Déclaration de fraude</h2>
+            
+            <div class="object-info-box" role="region" aria-label="Informations sur l'objet concerné">
+                <p><strong>Objet concerné :</strong></p>
+                <p id="fraudObjectTitle">--</p>
+                <p style="margin-top: 0.75rem;"><strong>Date de signature papier :</strong></p>
+                <p><span id="fraudSignatureDate">--</span> à <span id="fraudSignatureTime">--</span></p>
+            </div>
+            
+            <form class="fraud-form" onsubmit="event.preventDefault(); submitFraudDeclaration();">
+                <div class="fraud-form-group">
+                    <label for="fraudDescription">Description de la situation <span aria-label="requis">*</span> :</label>
+                    <textarea 
+                        id="fraudDescription" 
+                        name="fraudDescription"
+                        placeholder="Veuillez décrire les circonstances et expliquer pourquoi vous pensez qu'il s'agit d'une fraude..."
+                        required
+                        aria-required="true"
+                    ></textarea>
+                </div>
+                
+                <a href="https://www.ge.ch/informations-legales-fraude" target="_blank" rel="noopener noreferrer" class="fraud-info-link">
+                    <span aria-hidden="true">🔗</span> Plus d'informations sur la procédure
+                    <span class="visually-hidden">(ouverture dans une nouvelle fenêtre)</span>
+                </a>
+            
+                <div class="modal-buttons" style="margin-top: 1.5rem;">
+                    <button type="button" class="modal-button modal-button-primary" onclick="cancelFraudDeclaration()">Annuler</button>
+                    <button type="submit" class="modal-button modal-button-danger">Déposer la déclaration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal confirmation fraude -->
+    <div id="modalFraudConfirmation" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-fraud-confirm-title">
+        <div class="modal">
+            <h2 id="modal-fraud-confirm-title" class="modal-title"><span aria-hidden="true">✓</span> Déclaration enregistrée</h2>
+            <div class="modal-content">
+                <div class="success-box" style="margin: 0;" role="status" aria-live="polite">
+                    <p>Votre déclaration de fraude a bien été enregistrée.</p>
+                    <p style="margin-top: 0.75rem;">Vous serez contacté par les autorités compétentes dans les plus brefs délais pour la suite de la procédure.</p>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-button modal-button-primary" onclick="closeFraudConfirmation()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="e-collecting/inc/script.js"></script>
+    <script>
+        // Fonction pour basculer l'état de la section "Mes autres espaces"
+        function toggleSection(button) {
+            const arrow = button.querySelector('.sidebar-section-arrow');
+            const subsection = button.nextElementSibling;
+            const isExpanded = arrow.classList.contains('expanded');
+            
+            if (isExpanded) {
+                arrow.classList.remove('expanded');
+                subsection.style.display = 'none';
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                arrow.classList.add('expanded');
+                subsection.style.display = 'block';
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+</body>
+</html>

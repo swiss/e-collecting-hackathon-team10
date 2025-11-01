@@ -108,6 +108,7 @@ graph TB
     style CoSDB fill:#FFB6C1,stroke:#333,stroke-width:2px
     style Papier fill:#D3D3D3,stroke:#333,stroke-width:2px
 ```
+Vidéo de présentation du processus de signature en ligne
 <a href="https://ai.leclere.ch/e-collecting/" target="_blank">Démo</a>
 
 ### Flowchart: E-collecting : Parcours utilisateur - nominal

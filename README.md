@@ -282,16 +282,18 @@ flowchart TD
 * Autonomie des personnes en situation de handicap
 
 * Choix offert aux électeurs : digital ou papier
+  
+* Protection des données des signataires : seule l'administration a connaissance de l'identité de la personne 
 
 * Planification budgétaire : coûts prévisibles vs coûts variables des sociétés de récolte
 
 * Continuité de la démocratie directe en cas de crise sanitaire (cf. COVID)
 
-* Inclusion des jeunes : génération Digital Native plus encline à participer sur des canaux digitaux que papier
+* Inclusion des jeunes : génération <i>Digital Native</i> plus encline à participer sur des canaux digitaux que papier
 
 * Pas de dépendance à une entreprise US
 
-* Pas de frais de maintenance liée à un APP.
+* Pas de frais de maintenance liée à un APP
 
 ### Weaknesses / Faiblesse de la solution proposée :
 * Système basé sur un registre centralisé, si des cantons ou des communes souhaitent reprendre le concept, il est nécessaire d’avoir un registre électoral qui soit au final centralisé au niveau du canton ou au niveau fédéral.
@@ -305,9 +307,9 @@ flowchart TD
 
 * Polarisation accrue : facilitation = plus d'objets = saturation de l'agenda politique ?
 
-* Support utilisateur : hotline/FAQ à dimensionner correctement
+* Support utilisateur : hotline/FAQ à dimensionner correctement. Coûts à prévoir. 
 
-* Risque d’augmentation du nombre d’aboutissement des initiatives et de référendums
+* Risque d’augmentation du nombre d’aboutissement des initiatives et de référendums et donc d'encombrement de l'agenda politique
 
 * Risque de lassitude des électrices et électeurs
 

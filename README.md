@@ -264,8 +264,6 @@ flowchart TD
 
 ## Key Strenghts and Weaknesses
 
-*List the key strengths and weaknesses of your solution.*
-
 ### Strengths / Forces de la solution proposée :
 * Utilisation d’infrastructures existantes moyennant une adaptation des SI. Pas besoin de créer des infrastructures. Il s'agit d'une optimisation des ressources existantes.
 

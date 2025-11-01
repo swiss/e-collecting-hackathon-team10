@@ -244,7 +244,6 @@ flowchart TD
 ```
 
 
-### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience
 Présentation de l'expérience utilisateur étapes par étapes :

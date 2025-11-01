@@ -1,7 +1,7 @@
 # 10) Le système récolte des signatures sur le portail e-Gov genevois
 <img src="docs/image-dossier-900x450.jpg" alt="Téléphone avec accès e-démarches">
 
-## Approach / Notre proposition 
+## Notre proposition 
 
 Le canton de Genève souhaite développer une démarche en ligne d'e-collecting qui s'intègre directement dans le portail e-Gov (e-démarche à Genève) du canton. Cette prestation permettra d'offrir aux citoyennes et citoyens du canton un canal électronique, en plus du canal papier, qui s'interfacera à l'application genevoise de contrôle des signatures d'initiatives (IN) et de référendums (REF). 
 
@@ -60,7 +60,7 @@ Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d
 <a href="docs/presentation_PITCH_-recolte-signatures-V2.pdf"><img src="docs/pitch-illustration.png" alt="Image illustration PowerPoint pitch"></a>
 Présentation disponible en cliquant sur l'image.
 
-## Documentation and Diagrams
+## Documentation et Diagrammes
 ### Architecture : plateforme e-Gov et applicatif contrôle des signatures
 ```mermaid
 graph TB

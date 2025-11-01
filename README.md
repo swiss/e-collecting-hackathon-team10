@@ -58,6 +58,7 @@ Système de récolte en ligne sur la plateforme web ge.ch et pas d'utilisation d
   
 ## Pitch de la solution
 <a href="docs/presentation_PITCH_-recolte-signatures-V2.pdf"><img src="docs/pitch-illustration.png" alt="Image illustration PowerPoint pitch"></a>
+Présentation disponible en cliquant sur l'image.
 
 ## Documentation and Diagrams
 ### Architecture : plateforme e-Gov et applicatif contrôle des signatures

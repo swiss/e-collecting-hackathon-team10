@@ -247,7 +247,7 @@ flowchart TD
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience
-<img src="docs/image-dossier-900x450.jpg" alt="Téléphone avec accès e-démarches">
+<img src="ux/00.png" alt="Authentification">
 
 ## Topics addressed
 

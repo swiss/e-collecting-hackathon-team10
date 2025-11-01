@@ -246,7 +246,7 @@ flowchart TD
 
 ## User Experience
 Vidéo de présentation du processus de signature
-<a href="docs/03.jpeg"><img src="docs/e-collecting-ge-V1.mp4" alt="Image illustration vidéo démo"></a>
+<a href="ux/e-collecting-ge-V1g"><img src="ux/03.jpeg" alt="Image illustration vidéo démo"></a>
 
 ## Topics addressed
 

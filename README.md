@@ -245,11 +245,8 @@ flowchart TD
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience
-
-<video width="640" height="480" controls>
-  <source src="ux/e-collecting-ge-V1.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
+Vidéo de présentation du processus de signature
+<a href="docs/03.jpeg"><img src="docs/e-collecting-ge-V1.mp4" alt="Image illustration vidéo démo"></a>
 
 ## Topics addressed
 

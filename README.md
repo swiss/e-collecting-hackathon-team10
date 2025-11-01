@@ -247,16 +247,18 @@ flowchart TD
 ### Sequence Diagram: Detailed Interactions & Data Flows (Example)
 
 ## User Experience
-<img src="ux/00.png" alt="Authentification">
-<img src="ux/01.png" alt="Authentification">
-<img src="ux/02.jpeg" alt="Authentification">
-<img src="ux/03.jpeg" alt="Authentification">
-<img src="ux/04.jpeg" alt="Authentification">
-<img src="ux/05.jpeg" alt="Authentification">
-<img src="ux/06.jpeg" alt="Authentification">
-<img src="ux/07.jpeg" alt="Authentification">
-<img src="ux/08.jpeg" alt="Authentification">
-<img src="ux/09.jpeg" alt="Authentification">
+Présentation de l'expérience utilisateur étapes par étapes :
+
+<img src="ux/00.png" alt="Ecran 1">
+<img src="ux/01.png" alt="Ecran 2">
+<img src="ux/02.jpeg" alt="Ecran 3">
+<img src="ux/03.jpeg" alt="Ecran 4">
+<img src="ux/04.jpeg" alt="Ecran 5">
+<img src="ux/05.jpeg" alt="Ecran 6">
+<img src="ux/06.jpeg" alt="Ecran 7">
+<img src="ux/07.jpeg" alt="Ecran 8">
+<img src="ux/08.jpeg" alt="Ecran 9">
+<img src="ux/09.jpeg" alt="Ecran 10">
 
 ## Topics addressed
 

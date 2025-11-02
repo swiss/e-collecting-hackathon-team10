@@ -64,7 +64,7 @@ Présentation disponible en cliquant sur l'image.
 ### Architecture : plateforme e-Gov et applicatif contrôle des signatures
 ```mermaid
 graph TB
-    subgraph Internet["Zone Internet (accessible publiquement)"]
+    subgraph Internet["Zone Internet"]
         subgraph "Plateforme e-gov"
             EID["e-ID<br/>Application"]
             Impots["Impôts<br/>Application"]

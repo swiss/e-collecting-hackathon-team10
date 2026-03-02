@@ -84,17 +84,14 @@ graph TB
     end
 
     
-    EID --> Impots
     EID --> ECollecting
-    ECollecting --> Droits
-    ECollecting --> Population
-    ECollecting --> ROP
-	ECollecting --> CoSDB
+    EID --> Impots
+    ECollecting --> CoS
     CoS --> Droits
     CoS --> Population
     CoS --> ROP
 	CoS --> CoSDB
-    CoS --> Papier
+    Papier --> CoS 
     
     style Internet fill:#ffcccc,stroke:#cc0000,stroke-width:3px
     style Interne fill:#cce5ff,stroke:#0066cc,stroke-width:3px
@@ -102,8 +99,8 @@ graph TB
     style Droits fill:#90EE90,stroke:#333,stroke-width:2px
     style ROP fill:#90EE90,stroke:#333,stroke-width:2px
     style EID fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style Impots fill:#FFB6C1,stroke:#333,stroke-width:2px
     style ECollecting fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style Impots fill:#FFB6C1,stroke:#333,stroke-width:2px
     style CoS fill:#FFB6C1,stroke:#333,stroke-width:2px
     style CoSDB fill:#FFB6C1,stroke:#333,stroke-width:2px
     style Papier fill:#D3D3D3,stroke:#333,stroke-width:2px
